@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="info_height">150sp</dimen>
-    <dimen name="title_textSize">48sp</dimen>
+    <dimen name="score_panel_height">100sp</dimen>
+    <dimen name="title_textSize">64sp</dimen>
+    <dimen name="info_title_width">100sp</dimen>
+    <dimen name="info_textSize">24sp</dimen>
     <dimen name="grid_size">300sp</dimen>
     <dimen name="tile_size">60sp</dimen>
     <dimen name="tile_margin">5sp</dimen>
