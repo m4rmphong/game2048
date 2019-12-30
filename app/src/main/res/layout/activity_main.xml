@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/title_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/info_height"
+        android:layout_margin="8sp"
+        android:layout_marginTop="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textSize="@dimen/title_textSize" />
+
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/grid"
+        android:layout_width="@dimen/grid_size"
+        android:layout_height="@dimen/grid_size"
+        android:background="@drawable/grid_bg_round_corner"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tile0"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile1"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile2"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile3"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tile4"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile5"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile6"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile7"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tile8"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile9"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile10"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile11"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tile12"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile13"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile14"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tile15"
+                android:layout_width="@dimen/tile_size"
+                android:layout_height="@dimen/tile_size"
+                android:layout_margin="@dimen/tile_margin"
+                android:background="@drawable/tile_bg_round_corner"
+                android:gravity="center" />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/info_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/info_height"
+        android:layout_margin="8sp"
+        android:layout_marginBottom="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
