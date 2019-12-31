@@ -138,37 +138,45 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile0"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile1"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile2"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile3"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -176,37 +184,45 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile4"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile5"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile6"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile7"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
         </TableRow>
 
 
@@ -215,37 +231,45 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile8"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile9"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile10"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile11"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -253,37 +277,45 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile12"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile13"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile14"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.m4rmp.android.game2048.NumberTile
                 android:id="@+id/tile15"
                 android:layout_width="@dimen/tile_size"
                 android:layout_height="@dimen/tile_size"
                 android:layout_margin="@dimen/tile_margin"
                 android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="@dimen/tile_textSize"
+                android:textStyle="bold" />
         </TableRow>
     </TableLayout>
 

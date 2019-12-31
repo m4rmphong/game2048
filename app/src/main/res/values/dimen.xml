@@ -7,5 +7,6 @@
     <dimen name="info_textSize">24sp</dimen>
     <dimen name="grid_size">300sp</dimen>
     <dimen name="tile_size">60sp</dimen>
+    <dimen name="tile_textSize">18sp</dimen>
     <dimen name="tile_margin">5sp</dimen>
 </resources>

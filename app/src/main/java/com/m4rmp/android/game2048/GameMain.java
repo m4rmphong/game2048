@@ -75,6 +75,9 @@ public class GameMain extends AppCompatActivity {
                 updateUi();
             }
         });
+
+        NumberTile testTile = findViewById(R.id.tile0);
+        testTile.setTile(11);
     }
 
     private void resetGame() {
