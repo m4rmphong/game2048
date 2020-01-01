@@ -1,6 +1,7 @@
 package com.m4rmp.android.game2048;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class GameMain extends AppCompatActivity {
     private boolean mWin = false;
     private int mScore = 0;
     private int mRecord = 0;
+    private Grid mGrid;
     private Random mRand;
 
     // views
@@ -54,6 +56,7 @@ public class GameMain extends AppCompatActivity {
         mResetButton = findViewById(R.id.reset_button);
 
         // game data
+        mGrid = new Grid(this);
         mRand = new Random();
         initGame();
         initUI();
@@ -75,15 +78,13 @@ public class GameMain extends AppCompatActivity {
                 updateUi();
             }
         });
-
-        NumberTile testTile = findViewById(R.id.tile0);
-        testTile.setTile(11);
     }
 
     private void resetGame() {
+        log("i","game reset");
         mWin = false;
         mScore = 0;
-        // TODO: resetGrid()
+        mGrid.resetGrid();
     }
 
     private void updateUi() {
