@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class GameMain extends AppCompatActivity {
     private static final String TAG = "GameMain";
 
@@ -19,7 +17,6 @@ public class GameMain extends AppCompatActivity {
     private int mScore = 0;
     private int mRecord = 0;
     private Grid mGrid;
-    private Random mRand;
 
     // views
     private TextView mScoreText;
@@ -57,9 +54,10 @@ public class GameMain extends AppCompatActivity {
 
         // game data
         mGrid = new Grid(this);
-        mRand = new Random();
-        initGame();
+
+        //initialize
         initUI();
+        initGame();
     }
 
     private void initGame() {
@@ -84,7 +82,7 @@ public class GameMain extends AppCompatActivity {
         log("i","game reset");
         mWin = false;
         mScore = 0;
-        mGrid.resetGrid();
+        mGrid.newGrid();
     }
 
     private void updateUi() {
