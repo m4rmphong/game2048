@@ -20,9 +20,9 @@ public class Grid {
     private NumberTile[][] mGridUi;
 
     public Grid(Context aContext) {
+        GameMain.log("i", "Grid initialize");
         mContext = aContext;
         sRand = new Random();
-        GameMain.log("i", "Grid initialize");
         mGridData = new int[GRID_SIZE][GRID_SIZE];
         mGridUi = new NumberTile[GRID_SIZE][GRID_SIZE];
 
@@ -90,5 +90,10 @@ public class Grid {
                 mGridUi[row][col].setTile(mGridData[row][col]);
             }
         }
+    }
+
+    public void moveTiles(OnSwipeListener.Direction aDir) {
+        Log.d(TAG, "Move tiles "+aDir.toString());
+        genTile(1);
     }
 }

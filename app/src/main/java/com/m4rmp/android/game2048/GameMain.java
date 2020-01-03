@@ -2,6 +2,7 @@ package com.m4rmp.android.game2048;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,7 @@ public class GameMain extends AppCompatActivity {
     private Grid mGrid;
 
     // views
+    private ConstraintLayout mCanvas;
     private TextView mScoreText;
     private TextView mRecordText;
     private Button mResetButton;
@@ -48,6 +50,16 @@ public class GameMain extends AppCompatActivity {
 
     private void init() {
         // UI component
+        mCanvas = findViewById(R.id.canvas);
+        mCanvas.setOnTouchListener(new OnSwipeListener(this){
+            @Override
+            public void onSwipe(Direction aDir) {
+                super.onSwipe(aDir);
+                mGrid.moveTiles(aDir);
+                mGrid.updateGridUi();
+            }
+        });
+
         mScoreText = findViewById(R.id.score);
         mRecordText = findViewById(R.id.record);
         mResetButton = findViewById(R.id.reset_button);
