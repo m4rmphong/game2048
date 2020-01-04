@@ -13,20 +13,20 @@ public class Grid {
     public static String TAG = "Grid";
     public static int GRID_SIZE = 4;
     private static Random sRand;
-    private Context mContext;
 
+    private GameMain mGame;
     private int mEmptyCell = GRID_SIZE * GRID_SIZE;
     private int[][] mGridData;
     private NumberTile[][] mGridUi;
 
     public Grid(Context aContext) {
         GameMain.log("i", "Grid initialize");
-        mContext = aContext;
+        mGame = (GameMain) aContext;
         sRand = new Random();
         mGridData = new int[GRID_SIZE][GRID_SIZE];
         mGridUi = new NumberTile[GRID_SIZE][GRID_SIZE];
 
-        TableLayout grid = ((Activity) mContext).findViewById(R.id.grid);
+        TableLayout grid = ((Activity) aContext).findViewById(R.id.grid);
         for (int row = 0; row < grid.getChildCount(); row++) {
             TableRow gridRow = (TableRow) grid.getChildAt(row);
             for (int col = 0; col < gridRow.getChildCount(); col++) {
@@ -55,7 +55,14 @@ public class Grid {
     }
 
     private void nextGrid() {
-        genTile(1);
+        if (genTile(1)) {
+            // grid is full check movable
+            Log.d(TAG,"Grid is full!");
+            if (!isMovable()) {
+                // gameover
+                mGame.gameOver();
+            }
+        }
         updateGridUi();
     }
 
@@ -69,9 +76,9 @@ public class Grid {
         }
     }
 
-    private void genTile(int aNum) {
+    private boolean genTile(int aNum) {
         if (mEmptyCell == 0) {
-            return;
+            return true;
         }
 
         int i = 0;
@@ -86,6 +93,7 @@ public class Grid {
             }
 
         }
+        return mEmptyCell == 0;
     }
 
     public void updateGridUi() {
@@ -128,6 +136,7 @@ public class Grid {
                     // merge with same-level tile
                     arr[last]++;
                     mEmptyCell++;
+                    mGame.updateScore(arr[last]);
                 } else {
                     originLevel = tileLevel;
                     arr[++last] = tileLevel;
@@ -155,6 +164,7 @@ public class Grid {
                     // merge with same-level tile
                     arr[last]++;
                     mEmptyCell++;
+                    mGame.updateScore(arr[last]);
                 } else {
                     originLevel = tileLevel;
                     arr[++last] = tileLevel;
@@ -169,5 +179,33 @@ public class Grid {
                 mGridData[rowIdx][start + move * i] = arr[i++];
             }
         }
+    }
+
+    public boolean isMovable() {
+        for (int row = 0; row < GRID_SIZE; row++) {
+            for (int col = 0; col < GRID_SIZE; col++) {
+                if (row != 0) {
+                    if (mGridData[row][col] == mGridData[row - 1][col]) {
+                        return true;
+                    }
+                }
+                if (row != GRID_SIZE - 1) {
+                    if (mGridData[row][col] == mGridData[row + 1][col]) {
+                        return true;
+                    }
+                }
+                if (col != 0) {
+                    if (mGridData[row][col] == mGridData[row][col - 1]) {
+                        return true;
+                    }
+                }
+                if (col != GRID_SIZE - 1) {
+                    if (mGridData[row][col] == mGridData[row][col + 1]) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

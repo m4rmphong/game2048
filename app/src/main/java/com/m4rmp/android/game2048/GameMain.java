@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 public class GameMain extends AppCompatActivity {
     private static final String TAG = "GameMain";
+    private static int[] sLevelScore;
+    public static int WIN_LEVEL;
 
     // game manager
     private boolean mWin = false;
@@ -51,7 +53,7 @@ public class GameMain extends AppCompatActivity {
     private void init() {
         // UI component
         mCanvas = findViewById(R.id.canvas);
-        mCanvas.setOnTouchListener(new OnSwipeListener(this){
+        mCanvas.setOnTouchListener(new OnSwipeListener(this) {
             @Override
             public void onSwipe(Direction aDir) {
                 super.onSwipe(aDir);
@@ -65,6 +67,7 @@ public class GameMain extends AppCompatActivity {
 
         // game data
         mGrid = new Grid(this);
+        sLevelScore = getResources().getIntArray(R.array.levelScore);
 
         //initialize
         initUI();
@@ -90,7 +93,7 @@ public class GameMain extends AppCompatActivity {
     }
 
     private void resetGame() {
-        log("i","game reset");
+        log("i", "game reset");
         mWin = false;
         mScore = 0;
         mGrid.newGrid();
@@ -98,6 +101,23 @@ public class GameMain extends AppCompatActivity {
 
     private void updateUi() {
         mScoreText.setText(Integer.toString(mScore));
+        mRecordText.setText(Integer.toString(mRecord));
+    }
+
+    public void updateScore(int aLevel) {
+        mScore += sLevelScore[aLevel];
+        mRecord = Math.max(mScore, mRecord);
+        updateUi();
+        if (aLevel == WIN_LEVEL && !mWin) {
+            Log.i(TAG, "2048!");
+            mWin=true;
+            // TODO: show win message
+        }
+    }
+
+    public void gameOver(){
+        Log.i(TAG,"Game over!");
+        // TODO: show lose message
     }
 
 }
