@@ -54,6 +54,11 @@ public class Grid {
         updateGridUi();
     }
 
+    private void nextGrid() {
+        genTile(1);
+        updateGridUi();
+    }
+
     private void resetGrid() {
         mEmptyCell = GRID_SIZE * GRID_SIZE;
         for (int row = 0; row < GRID_SIZE; row++) {
@@ -93,7 +98,76 @@ public class Grid {
     }
 
     public void moveTiles(OnSwipeListener.Direction aDir) {
-        Log.d(TAG, "Move tiles "+aDir.toString());
-        genTile(1);
+        Log.d(TAG, "Move tiles " + aDir.toString());
+        int start, move;
+        if (aDir == OnSwipeListener.Direction.up || aDir == OnSwipeListener.Direction.down) {
+            start = aDir == OnSwipeListener.Direction.up ? 0 : GRID_SIZE - 1;
+            move = aDir == OnSwipeListener.Direction.up ? 1 : -1;
+            for (int col = 0; col < GRID_SIZE; col++) {
+                moveSingleCol(col, start, move);
+            }
+        } else if (aDir == OnSwipeListener.Direction.left || aDir == OnSwipeListener.Direction.right) {
+            start = aDir == OnSwipeListener.Direction.left ? 0 : GRID_SIZE - 1;
+            move = aDir == OnSwipeListener.Direction.left ? 1 : -1;
+            for (int row = 0; row < GRID_SIZE; row++) {
+                moveSingleRow(row, start, move);
+            }
+        }
+
+        nextGrid();
+    }
+
+    private void moveSingleCol(int colIdx, int start, int move) {
+        int[] arr = new int[GRID_SIZE];
+        int last = -1;
+        int originLevel = 0;
+        for (int i = 0, row = start; i < GRID_SIZE; i++, row += move) {
+            int tileLevel = mGridData[row][colIdx];
+            if (tileLevel != 0) {
+                if (last != -1 && tileLevel == arr[last] && tileLevel == originLevel) {
+                    // merge with same-level tile
+                    arr[last]++;
+                    mEmptyCell++;
+                } else {
+                    originLevel = tileLevel;
+                    arr[++last] = tileLevel;
+                }
+                mGridData[row][colIdx] = 0;
+            }
+        }
+        // update row
+        if (last != -1) {
+            int i = 0;
+            while (i < last + 1) {
+                mGridData[start + move * i][colIdx] = arr[i++];
+            }
+        }
+    }
+
+    private void moveSingleRow(int rowIdx, int start, int move) {
+        int[] arr = new int[GRID_SIZE];
+        int last = -1;
+        int originLevel = 0;
+        for (int i = 0, col = start; i < GRID_SIZE; i++, col += move) {
+            int tileLevel = mGridData[rowIdx][col];
+            if (tileLevel != 0) {
+                if (last != -1 && tileLevel == arr[last] && tileLevel == originLevel) {
+                    // merge with same-level tile
+                    arr[last]++;
+                    mEmptyCell++;
+                } else {
+                    originLevel = tileLevel;
+                    arr[++last] = tileLevel;
+                }
+                mGridData[rowIdx][col] = 0;
+            }
+        }
+        // update col
+        if (last != -1) {
+            int i = 0;
+            while (i < last + 1) {
+                mGridData[rowIdx][start + move * i] = arr[i++];
+            }
+        }
     }
 }

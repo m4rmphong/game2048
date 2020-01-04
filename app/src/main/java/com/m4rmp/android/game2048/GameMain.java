@@ -56,7 +56,6 @@ public class GameMain extends AppCompatActivity {
             public void onSwipe(Direction aDir) {
                 super.onSwipe(aDir);
                 mGrid.moveTiles(aDir);
-                mGrid.updateGridUi();
             }
         });
 
