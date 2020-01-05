@@ -57,7 +57,7 @@ public class Grid {
     private void nextGrid() {
         if (genTile(1)) {
             // grid is full check movable
-            Log.d(TAG,"Grid is full!");
+            Log.d(TAG, "Grid is full!");
             if (!isMovable()) {
                 // gameover
                 mGame.gameOver();
@@ -83,7 +83,11 @@ public class Grid {
 
         int i = 0;
         while (i < aNum) {
-            int level = sRand.nextInt(2) + 1;
+            //int level = sRand.nextInt(2) + 1;
+            int level = randTileLevel();
+            if (level < 0) {
+                Log.d(TAG, "Generate obstacle");
+            }
             int rowIdx = sRand.nextInt(GRID_SIZE);
             int colIdx = sRand.nextInt(GRID_SIZE);
             if (mGridData[rowIdx][colIdx] == 0) {
@@ -94,6 +98,13 @@ public class Grid {
 
         }
         return mEmptyCell == 0;
+    }
+
+    private int[] initTileLevels = {1, 1, 2, 2, -1};
+
+    private int randTileLevel() {
+        int randIdx = sRand.nextInt(initTileLevels.length);
+        return initTileLevels[randIdx];
     }
 
     public void updateGridUi() {
@@ -108,15 +119,15 @@ public class Grid {
     public void moveTiles(OnSwipeListener.Direction aDir) {
         Log.d(TAG, "Move tiles " + aDir.toString());
         int start, move;
-        if (aDir == OnSwipeListener.Direction.up || aDir == OnSwipeListener.Direction.down) {
-            start = aDir == OnSwipeListener.Direction.up ? 0 : GRID_SIZE - 1;
-            move = aDir == OnSwipeListener.Direction.up ? 1 : -1;
+        if (aDir == OnSwipeListener.Direction.UP || aDir == OnSwipeListener.Direction.DOWN) {
+            start = aDir == OnSwipeListener.Direction.UP ? 0 : GRID_SIZE - 1;
+            move = aDir == OnSwipeListener.Direction.UP ? 1 : -1;
             for (int col = 0; col < GRID_SIZE; col++) {
                 moveSingleCol(col, start, move);
             }
-        } else if (aDir == OnSwipeListener.Direction.left || aDir == OnSwipeListener.Direction.right) {
-            start = aDir == OnSwipeListener.Direction.left ? 0 : GRID_SIZE - 1;
-            move = aDir == OnSwipeListener.Direction.left ? 1 : -1;
+        } else if (aDir == OnSwipeListener.Direction.LEFT || aDir == OnSwipeListener.Direction.RIGHT) {
+            start = aDir == OnSwipeListener.Direction.LEFT ? 0 : GRID_SIZE - 1;
+            move = aDir == OnSwipeListener.Direction.LEFT ? 1 : -1;
             for (int row = 0; row < GRID_SIZE; row++) {
                 moveSingleRow(row, start, move);
             }
@@ -134,9 +145,15 @@ public class Grid {
             if (tileLevel != 0) {
                 if (last != -1 && tileLevel == arr[last] && tileLevel == originLevel) {
                     // merge with same-level tile
+                    Log.d(TAG, "Merge " + tileLevel);
                     arr[last]++;
                     mEmptyCell++;
                     mGame.updateScore(arr[last]);
+                    if (tileLevel < 0) {
+                        // generate two empty cell when eliminating obstacles
+                        last--;
+                        mEmptyCell++;
+                    }
                 } else {
                     originLevel = tileLevel;
                     arr[++last] = tileLevel;
@@ -162,9 +179,15 @@ public class Grid {
             if (tileLevel != 0) {
                 if (last != -1 && tileLevel == arr[last] && tileLevel == originLevel) {
                     // merge with same-level tile
+                    Log.d(TAG, "Merge " + tileLevel);
                     arr[last]++;
                     mEmptyCell++;
                     mGame.updateScore(arr[last]);
+                    if (tileLevel < 0) {
+                        // generate two empty cell when eliminating obstacles
+                        last--;
+                        mEmptyCell++;
+                    }
                 } else {
                     originLevel = tileLevel;
                     arr[++last] = tileLevel;

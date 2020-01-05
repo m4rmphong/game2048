@@ -13,7 +13,10 @@ import android.widget.TextView;
 public class GameMain extends AppCompatActivity {
     private static final String TAG = "GameMain";
     private static int[] sLevelScore;
-    public static int WIN_LEVEL;
+    private static int[] sObstacleScore;
+    public static int WIN_LEVEL = 11;
+
+    public enum sGameStatus {WIN, LOSE}
 
     // game manager
     private boolean mWin = false;
@@ -68,6 +71,7 @@ public class GameMain extends AppCompatActivity {
         // game data
         mGrid = new Grid(this);
         sLevelScore = getResources().getIntArray(R.array.levelScore);
+        sObstacleScore = getResources().getIntArray(R.array.obstacleScore);
 
         //initialize
         initUI();
@@ -105,18 +109,22 @@ public class GameMain extends AppCompatActivity {
     }
 
     public void updateScore(int aLevel) {
-        mScore += sLevelScore[aLevel];
+        if (aLevel > 0) {
+            mScore += sLevelScore[aLevel];
+        } else {
+            mScore += sObstacleScore[-aLevel];
+        }
         mRecord = Math.max(mScore, mRecord);
         updateUi();
         if (aLevel == WIN_LEVEL && !mWin) {
-            Log.i(TAG, "2048!");
-            mWin=true;
+            Log.i(TAG, sGameStatus.WIN.toString());
+            mWin = true;
             // TODO: show win message
         }
     }
 
-    public void gameOver(){
-        Log.i(TAG,"Game over!");
+    public void gameOver() {
+        Log.i(TAG, sGameStatus.LOSE.toString());
         // TODO: show lose message
     }
 

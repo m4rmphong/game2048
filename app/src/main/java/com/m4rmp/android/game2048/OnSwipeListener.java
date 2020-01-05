@@ -10,10 +10,10 @@ public class OnSwipeListener implements View.OnTouchListener {
     public static String TAG = "SwipeListener";
 
     public enum Direction {
-        up,
-        down,
-        left,
-        right
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
     }
 
     private final GestureDetector mGestureDetector;
@@ -47,18 +47,18 @@ public class OnSwipeListener implements View.OnTouchListener {
                 if (Math.abs(disX) > Math.abs(disY)) {
                     if (Math.abs(disX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_V_THRESHOLD) {
                         if (disX > 0) {
-                            onSwipe(Direction.right);
+                            onSwipe(Direction.RIGHT);
                         } else {
-                            onSwipe(Direction.left);
+                            onSwipe(Direction.LEFT);
                         }
                     }
 
                 } else if (Math.abs(disY) > Math.abs(disX)) {
                     if (Math.abs(disY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_V_THRESHOLD) {
                         if (disY > 0) {
-                            onSwipe(Direction.down);
+                            onSwipe(Direction.DOWN);
                         } else {
-                            onSwipe(Direction.up);
+                            onSwipe(Direction.UP);
                         }
                     }
                 }

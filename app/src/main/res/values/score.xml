@@ -15,4 +15,8 @@
         <item>2048</item>
         <item>4096</item>
     </integer-array>
+    <integer-array name="obstacleScore">
+        <item>1</item>
+        <item>-4</item>
+    </integer-array>
 </resources>

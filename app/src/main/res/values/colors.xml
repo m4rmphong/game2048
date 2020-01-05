@@ -22,4 +22,8 @@
         <item>#FFC107</item>
         <item>#FF7043</item>
     </array>
+    <array name="obstacleColor">
+        <item>#EEEEEE</item>
+        <item>#E8EAF6</item>
+    </array>
 </resources>
