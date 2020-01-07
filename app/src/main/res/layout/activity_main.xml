@@ -132,192 +132,212 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.60">
+        app:layout_constraintVertical_bias="0.60" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center">-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile0"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile0"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile1"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile1"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile2"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile2"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile3"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
-        </TableRow>
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile3"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center">-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile4"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile4"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile5"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile5"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile6"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile6"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile7"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
-        </TableRow>
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile7"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
 
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center">-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile8"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile8"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile9"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile9"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile10"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile10"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile11"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
-        </TableRow>
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile11"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center">-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile12"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile12"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile13"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile13"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile14"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile14"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
 
-            <com.m4rmp.android.game2048.NumberTile
-                android:id="@+id/tile15"
-                android:layout_width="@dimen/tile_size"
-                android:layout_height="@dimen/tile_size"
-                android:layout_margin="@dimen/tile_margin"
-                android:background="@drawable/tile_bg_round_corner"
-                android:gravity="center"
-                android:textSize="@dimen/tile_textSize"
-                android:textStyle="bold" />
-        </TableRow>
-    </TableLayout>
+<!--            <com.m4rmp.android.game2048.NumberTile-->
+<!--                android:id="@+id/tile15"-->
+<!--                android:layout_width="@dimen/tile_size"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="@dimen/tile_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/tile_bg_round_corner"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="@dimen/tile_textSize"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
+<!--    </TableLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4rmp.android.game2048.NumberTile xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/tile_size"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/tile_margin"
+    android:layout_weight="1"
+    android:background="@drawable/tile_bg_round_corner"
+    android:gravity="center"
+    android:textSize="@dimen/tile_textSize"
+    android:textStyle="bold" />

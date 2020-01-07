@@ -2,6 +2,7 @@ package com.m4rmp.android.game2048;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -27,11 +28,15 @@ public class Grid {
         mGridUi = new NumberTile[GRID_SIZE][GRID_SIZE];
 
         TableLayout grid = ((Activity) aContext).findViewById(R.id.grid);
-        for (int row = 0; row < grid.getChildCount(); row++) {
-            TableRow gridRow = (TableRow) grid.getChildAt(row);
-            for (int col = 0; col < gridRow.getChildCount(); col++) {
-                mGridUi[row][col] = (NumberTile) gridRow.getChildAt(col);
+        LayoutInflater layoutInflater = mGame.getLayoutInflater();
+        for (int row = 0; row < GRID_SIZE; row++) {
+            TableRow gridRow = (TableRow) layoutInflater.inflate(R.layout.grid_row, grid, false);
+            for (int col = 0; col < GRID_SIZE; col++) {
+                NumberTile tile = (NumberTile) layoutInflater.inflate(R.layout.number_tile, gridRow, false);
+                mGridUi[row][col] = tile;
+                gridRow.addView(tile);
             }
+            grid.addView(gridRow);
         }
     }
 
