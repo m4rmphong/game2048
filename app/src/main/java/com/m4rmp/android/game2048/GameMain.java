@@ -74,7 +74,7 @@ public class GameMain extends AppCompatActivity {
         sObstacleScore = getResources().getIntArray(R.array.obstacleScore);
 
         //initialize
-        initUI();
+        initUiData();
         initGame();
     }
 
@@ -83,29 +83,11 @@ public class GameMain extends AppCompatActivity {
         resetGame();
     }
 
-    private void initUI() {
-        mScoreText.setText(Integer.toString(mScore));
-        mRecordText.setText(Integer.toString(mRecord));
-
-        mResetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetGame();
-                updateUi();
-            }
-        });
-    }
-
     private void resetGame() {
         log("i", "game reset");
         mWin = false;
         mScore = 0;
         mGrid.newGrid();
-    }
-
-    private void updateUi() {
-        mScoreText.setText(Integer.toString(mScore));
-        mRecordText.setText(Integer.toString(mRecord));
     }
 
     public void updateScore(int aLevel) {
@@ -128,4 +110,22 @@ public class GameMain extends AppCompatActivity {
         // TODO: show lose message
     }
 
+    // UI
+    private void initUiData() {
+        mScoreText.setText(Integer.toString(mScore));
+        mRecordText.setText(Integer.toString(mRecord));
+
+        mResetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetGame();
+                updateUi();
+            }
+        });
+    }
+
+    private void updateUi() {
+        mScoreText.setText(Integer.toString(mScore));
+        mRecordText.setText(Integer.toString(mRecord));
+    }
 }
