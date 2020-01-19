@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class GameMain extends AppCompatActivity {
@@ -29,6 +30,7 @@ public class GameMain extends AppCompatActivity {
     private TextView mScoreText;
     private TextView mRecordText;
     private Button mResetButton;
+    private ImageButton mMenuButton;
 
 
     @Override
@@ -67,6 +69,7 @@ public class GameMain extends AppCompatActivity {
         mScoreText = findViewById(R.id.score);
         mRecordText = findViewById(R.id.record);
         mResetButton = findViewById(R.id.reset_button);
+        mMenuButton = findViewById(R.id.menu_button);
 
         // game data
         mGrid = new Grid(this);
@@ -120,6 +123,13 @@ public class GameMain extends AppCompatActivity {
             public void onClick(View v) {
                 resetGame();
                 updateUi();
+            }
+        });
+
+        mMenuButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Press Menu");
             }
         });
     }

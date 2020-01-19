@@ -17,6 +17,7 @@
     </integer-array>
     <integer-array name="obstacleScore">
         <item>1</item>
+        <item>-2</item>
         <item>-4</item>
     </integer-array>
 </resources>

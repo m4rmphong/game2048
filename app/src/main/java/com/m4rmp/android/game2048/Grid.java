@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class Grid {
     public static String TAG = "Grid";
-    public static int GRID_SIZE = 4;
+    public static int GRID_SIZE = 5;
     private static Random sRand;
 
     private GameMain mGame;
@@ -105,7 +105,7 @@ public class Grid {
         return mEmptyCell == 0;
     }
 
-    private int[] initTileLevels = {1, 1, 2, 2, -1};
+    private int[] initTileLevels = {1, 1, 1, 2, 2, 2, -1, -2};
 
     private int randTileLevel() {
         int randIdx = sRand.nextInt(initTileLevels.length);

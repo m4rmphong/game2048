@@ -25,5 +25,6 @@
     <array name="obstacleColor">
         <item>#EEEEEE</item>
         <item>#E8EAF6</item>
+        <item>#9FA8DA</item>
     </array>
 </resources>
